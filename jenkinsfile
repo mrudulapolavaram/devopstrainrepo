@@ -10,7 +10,7 @@ node any
  
     		echo "build step"
    
-	       {
+	       }
     
        		   }
 	stage(test) {
