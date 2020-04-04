@@ -4,7 +4,7 @@ agent any
 
   stages {
 
-     stage('compile') {
+     stage('compile project 1') {
    
          steps {
  
@@ -12,24 +12,23 @@ agent any
 	       }
     
        		   }
-	stage('test') {
+	stage('compile project 2') {
     
            steps {
 
-		build 'pipeline-test'
+		build 'jenkins-understand'
+		
+		}
+		    }
+			stage('compile project 3') {
+    
+           steps {
+
+		build 'first-job'
 		
 		}
 		    }
 
-	stage('deploy') {
-
-	   steps {
-
-		build 'pipeline-install'
-
-		}
-
-		    }
 	} 
 	
 }  
