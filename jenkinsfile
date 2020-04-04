@@ -8,8 +8,7 @@ agent any
    
          steps {
  
-    		echo "build step"
-   
+    		build 'pipeline-compile'
 	       }
     
        		   }
