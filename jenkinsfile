@@ -3,7 +3,7 @@ pipeline
 agent any 
 tools { 
         maven 'MAVEN363' 
-        jdk 'jdk1.8.0_202' 
+        jdk 'java1.8.0' 
     }
 
   stages {
