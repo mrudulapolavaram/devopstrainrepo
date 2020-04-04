@@ -6,25 +6,25 @@ agent any
 
      stage('compile') {
    
-         step {
+         steps {
  
     		echo "build step"
    
 	       }
     
        		   }
-	stage(test) {
+	stage('test') {
     
-           step {
+           steps {
 
 		echo "test step"
 		
 		}
 		    }
 
-	stage(deploy) {
+	stage('deploy') {
 
-	   step {
+	   steps {
 
 		echo "deploy step"
 
