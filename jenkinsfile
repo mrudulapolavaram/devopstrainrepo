@@ -3,32 +3,24 @@ pipeline
 agent any 
 
   stages {
-
-     stage('compile project 1') {
-   
-         steps {
  
-    		build 'pipeline-compile'
-	       }
-    
-       		   }
-	stage('compile project 2') {
-    
-           steps {
-
-		build 'jenkins-understand'
-		
+       stage ('git checkout') {
+	   
+	      steps {
+		  
+		   git branch: 'develop', url: 'https://github.com/mrudulapolavaram/devopstrainrepo.git'
+		   
+		   }
 		}
-		    }
-			stage('compile project 3') {
-    
-           steps {
-
-		build 'firstjob'
+		   
+	    stage ('compile') {
 		
+		  steps {
+		  
+		   build 'firstjob'
+		   
+		   }
 		}
-		    }
-
 	} 
 	
 }  
