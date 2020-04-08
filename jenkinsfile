@@ -29,7 +29,7 @@ tools {
 	} 
 	stage ('Build') {
             steps {
-                sh 'mvn build' 
+                mvn build 
             }
             
             }
