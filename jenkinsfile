@@ -1,8 +1,8 @@
 
-def IMAGE = 'myimage:v1'
 
 pipeline
 {
+def IMAGE = 'myimage:v1'
 agent { label 'node1' 
    }
  tools { 
