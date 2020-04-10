@@ -2,14 +2,17 @@
 
 pipeline
 {
-def IMAGE = 'myimage:v1'
+
 agent { label 'node1' 
    }
  tools { 
         maven 'MAVEN363' 
         jdk 'java1.8.0' 
     }
+environment {
 
+def IMAGE = 'myimage:v1'
+}
 
   stages {
  
