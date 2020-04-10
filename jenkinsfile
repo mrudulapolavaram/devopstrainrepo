@@ -29,7 +29,7 @@ tools {
 	} 
 	stage ('Build') {
             steps {
-                withmaven(maven : 'MAVEN363') {
+                withMaven(maven : 'MAVEN363') {
 				    sh 'mvn clean compile'
 				}
             }
