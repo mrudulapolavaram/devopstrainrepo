@@ -50,8 +50,8 @@ agent { label 'node1'
         // download the dockerfile to build from
                 // build our docker image
        def myImg
-       steps { myImg = docker.build 'my-image1:snapshot'
-    }
+        myImg = docker.build 'my-image1:snapshot'
+    
 	}
 	}
 }  
