@@ -1,5 +1,5 @@
 
-def IMAGE = 'myimage:v1"
+def IMAGE = 'myimage:v1'
 
 pipeline
 {
