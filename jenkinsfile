@@ -1,6 +1,6 @@
 pipeline
 {
-agent any 
+agent node1 
 tools { 
         maven 'MAVEN363' 
         jdk 'java1.8.0' 
