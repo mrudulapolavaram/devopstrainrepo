@@ -75,7 +75,7 @@ parameters{
 	    }
 		
 	  steps {
-	      docker run -p 8091:8080 -it ${Imagedoc}:${version_no}
+	      docker run -p 8091:8080 ${Imagedoc}:${version_no}
 	  }
 	  
 	  }
