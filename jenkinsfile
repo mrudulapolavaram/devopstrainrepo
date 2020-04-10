@@ -2,11 +2,11 @@ pipeline
 {
 agent { label 'node1' 
    }
-   dockerfile true
-tools { 
+ tools { 
         maven 'MAVEN363' 
         jdk 'java1.8.0' 
     }
+def myImg
 
   stages {
  
@@ -45,6 +45,12 @@ tools {
 			}
             }	
             
-            }
-			
+     		
+    stage ("Build image") {
+        // download the dockerfile to build from
+                // build our docker image
+       steps { myImg = docker.build 'my-image1:snapshot'
+    }
+	}
+	}
 }  
