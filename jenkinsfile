@@ -56,8 +56,7 @@ agent { label 'node1'
            sh'''
 	       cd ${WORKSPACE}
 		   echo ${WORKSPACE}
-           docker build ${IMAGE} 
-	       
+           docker build -t myimage:v1   
 	       '''
 		   }
 	}
