@@ -47,14 +47,15 @@ agent { label 'node1'
             
      		
     stage ("Build image") {
+	       steps{		     
         // download the dockerfile to build from
                 // build our docker image
-       sh'''
-	   cd ${WORKSPACE}
-       docker build .	   
-	   
-	   '''
-    
+           sh'''
+	       cd ${WORKSPACE}
+           docker build .	   
+	       
+	       '''
+		   }
 	}
 	}
 }  
