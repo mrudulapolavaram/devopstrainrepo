@@ -12,6 +12,7 @@ agent { label 'node1'
 environment {
 
 def IMAGE = 'myimage:v1'
+def image1
 }
 
   stages {
@@ -60,7 +61,7 @@ def IMAGE = 'myimage:v1'
 	       cd ${WORKSPACE}
 		   echo ${WORKSPACE}
 		   echo ${IMAGE}
-           docker build IMAGE
+           image1 = docker build .
 	       '''
 		   }
 	}
