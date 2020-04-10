@@ -1,8 +1,8 @@
 pipeline
 {
 agent { label 'node1' 
-   dockerfile true
    }
+   dockerfile true
 tools { 
         maven 'MAVEN363' 
         jdk 'java1.8.0' 
