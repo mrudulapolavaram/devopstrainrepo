@@ -75,7 +75,7 @@ parameters{
 	    }
 		
 	  steps {
-	      docker run -p 8093:8080 -it ${IMAGED}:${VRSN}
+	      docker run -p 8093:8080 -it ${IMAGE}
 	  }
 	  
 	  }
