@@ -9,7 +9,7 @@ RUN apt-get update && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 
 RUN mkdir /app
-COPY student-services-security-0.0.1-SNAPSHOT.war  /app
+COPY ./target/student-services-security-0.0.1-SNAPSHOT.war  /app
 WORKDIR /app
 #RUN sh -c "touch student-services-security-0.0.1-SNAPSHOT.war'
 ENTRYPOINT [ "java", "-jar","student-services-security-0.0.1-SNAPSHOT.war" ]
