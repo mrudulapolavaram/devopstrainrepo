@@ -6,6 +6,10 @@ pipeline
 agent { label 'node1' 
    }
 
+ tools { 
+        maven 'MAVEN363' 
+        jdk 'java1.8.0' 
+    }
 parameters{
       string(name: 'IMAGE', defaultValue: 'myimage', description: 'docker image name')
 }
