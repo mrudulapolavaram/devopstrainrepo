@@ -62,6 +62,7 @@ parameters{
            docker build . -t ${IMAGE}:${BUILD_NUMBER}
 	       '''
 		   }
+		   }
     stage ("interactive msg") {
 	
 	  input {
@@ -75,7 +76,7 @@ parameters{
 	    }
 		
 	  steps {
-	      docker run -it ${IMAGE}
+	      docker run -p 8093:8090 -it ${IMAGED}:${VRSN}
 	  }
 	  
 	  }
