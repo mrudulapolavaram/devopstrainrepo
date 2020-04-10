@@ -6,7 +6,7 @@ agent { label 'node1'
         maven 'MAVEN363' 
         jdk 'java1.8.0' 
     }
-def myImg
+
 
   stages {
  
@@ -49,6 +49,7 @@ def myImg
     stage ("Build image") {
         // download the dockerfile to build from
                 // build our docker image
+       def myImg
        steps { myImg = docker.build 'my-image1:snapshot'
     }
 	}
