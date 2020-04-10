@@ -74,12 +74,12 @@ parameters{
 		  string(name : 'VRSN' , defaultValue : 'v1' , description : 'docker version number')
 		  
 	    }
-		
+		}
 	  steps {
 	     sh  'docker run -p 8093:8090 -it ${IMAGED}:${VRSN} '
 	  }
 	  
-	  }
+	  
 	}
 	}
 }  
