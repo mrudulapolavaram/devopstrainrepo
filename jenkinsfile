@@ -62,6 +62,23 @@ parameters{
            docker build . -t ${IMAGE}:${BUILD_NUMBER}
 	       '''
 		   }
+    stage ("interactive msg") {
+	
+	  input {
+	  
+	  message "should we continue with the deployment?"
+	  ok "yes,we should"
+	  parameters {
+	      string(name : 'Imagedoc' , defaultValue : 'myimage' , description : 'docker image name')
+		  string(name : 'version_no' , defaultValue : 'v1' , description : 'docker version number')
+		  
+	    }
+		
+	  steps {
+	      docker run -p 8091:8080 -it ${Imagedoc}:${version_no}
+	  }
+	  
+	  }
 	}
 	}
 }  
