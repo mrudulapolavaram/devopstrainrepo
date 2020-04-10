@@ -69,13 +69,13 @@ parameters{
 	  message "should we continue with the deployment?"
 	  ok "yes,we should"
 	  parameters {
-	      string(name : 'Imagedoc' , defaultValue : 'myimage' , description : 'docker image name')
-		  string(name : 'version_no' , defaultValue : 'v1' , description : 'docker version number')
+	      string(name : 'IMAGED' , defaultValue : 'myimage' , description : 'docker image name')
+		  string(name : 'VRSN' , defaultValue : 'v1' , description : 'docker version number')
 		  
 	    }
 		
 	  steps {
-	      docker run -it ${Imagedoc}:${version_no}
+	      docker run -p 8093:8080 -it ${IMAGED}:${VRSN}
 	  }
 	  
 	  }
